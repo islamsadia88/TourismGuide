@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset = "utf-8">
+<meta name = "viewport" content = "width=device-width, initial-scale=1">
+<link href = "css/bootstrap.css" rel = "stylesheet" type = "text/css"/>
+<link href="css.css" rel="stylesheet" type="text/css"/>
+<link rel = "stylesheet" href = "http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<title>Comment Box</title>
+</head>
+
+
+<style>
+
+#wrap{
+border: 1px solid lightgray;
+alignment-adjust: central;
+width: 1000px;
+margin-left: 150px;
+margin-top: 10px;
+box-shadow: 0 5px 0 #e6e6e6;
+padding-bottom: 50px;
+
+
+}
+h1{
+color: blue-violet;
+text-align: center;
+}
+
+h3.heading{
+margin-left: 20px;
+background-color: #fafafa;
+font-size: 25px;
+float: left;
+padding-left: 40px;
+position: relative;
+width: 405px;
+height: 40px;
+padding-top: 5px;
+
+}
+#upper_blank{
+border-bottom: 7px solid steelblue;
+margin-top: 40px;
+margin-right: 485px;
+width: 570px;
+padding-right: 480px;
+}
+p{
+margin-left: 5px;
+padding: 8px;
+padding-left: 20px;
+}
+#name{
+margin-left: 20px;
+box-shadow: 0 2px 0 #e6e6e6;
+height: 40px;
+padding-left: 10px;
+width: 500px;
+}
+#email{
+margin-left: 20px;
+box-shadow: 0 2px 0 #e6e6e6;
+height: 40px;
+padding-left: 10px;
+width: 500px;
+}
+#url{
+margin-left: 20px;
+box-shadow: 0 2px 0 #e6e6e6;
+height: 40px;
+padding-left: 10px;
+width: 500px;
+}
+#comment{
+margin-left: 20px;
+box-shadow: 0 2px 0 #e6e6e6;
+height: 40px;
+padding-left: 10px;
+width: 650px;
+height: 200px;
+}
+#commentSubmit{
+margin-left: 20px;
+width: 250px;
+height: 55px;
+color: white;
+font-size: 20px;
+background-color: #2c95dc;
+box-shadow: 0 3px 0 #09466f;
+margin-bottom: 30px;
+padding-left: 20px;
+border-radius: 5px;
+}
+#commentSubmit:hover {
+background-color: #09466f;
+
+}
+
+p{
+font-size: 18px;
+color: gray;
+padding-bottom: 15px;
+padding-top: 15px;
+}
+p1{
+font-size: 18px;
+padding-top: 20px;
+}
+
+h3.second_heading{
+margin-left: 0;
+margin-top: 30px;
+font-size: 20px;
+width: 300px;
+height: 50px;
+padding-top: 10px;
+padding-left: 150px;
+
+}
+#middle{
+border: 1px solid lightgray;
+width: 1000px;
+height: 200px;
+background-color: lightyellow;
+margin-left: 150px;
+text-align: left;
+margin-top: 10px;
+box-shadow: 0 2px 0 lightgray;
+}
+.blank{
+border-bottom: 7px solid steelblue;
+margin-top: 50px;
+margin-left: 150px;
+margin-right: 100px;
+width: 800px;
+}
+
+#inner_reply{
+
+margin-left: 800px;
+margin-top: 1600px;
+width: 100px;
+height: 30px;
+background-color: #2c95dc;
+text-align: center;
+font-size: 18px;
+color: white;
+border-radius: 18px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.panel-shadow {
+    box-shadow: rgba(0, 0, 0, 0.3) 7px 7px 7px;
+}
+.panel-white {
+  border: 1px solid #dddddd;
+}
+.panel-white  .panel-heading {
+  color: #333;
+  background-color: #fff;
+  border-color: #ddd;
+}
+.panel-white  .panel-footer {
+  background-color: #fff;
+  border-color: #ddd;
+}
+
+.post .post-heading {
+  height: 95px;
+  padding: 20px 15px;
+}
+.post .post-heading .avatar {
+  width: 60px;
+  height: 60px;
+  display: block;
+  margin-right: 15px;
+}
+.post .post-heading .meta .title {
+  margin-bottom: 0;
+}
+.post .post-heading .meta .title a {
+  color: black;
+}
+.post .post-heading .meta .title a:hover {
+  color: #aaaaaa;
+}
+.post .post-heading .meta .time {
+  margin-top: 8px;
+  color: #999;
+}
+.post .post-image .image {
+  width: 100%;
+  height: auto;
+}
+.post .post-description {
+  padding: 15px;
+}
+.post .post-description p {
+  font-size: 14px;
+}
+.post .post-description .stats {
+  margin-top: 20px;
+}
+.post .post-description .stats .stat-item {
+  display: inline-block;
+  margin-right: 15px;
+}
+.post .post-description .stats .stat-item .icon {
+  margin-right: 8px;
+}
+.post .post-footer {
+  border-top: 1px solid #ddd;
+  padding: 15px;
+}
+.post .post-footer .input-group-addon a {
+  color: #454545;
+}
+.post .post-footer .comments-list {
+  padding: 0;
+  margin-top: 20px;
+  list-style-type: none;
+}
+.post .post-footer .comments-list .comment {
+  display: block;
+  width: 100%;
+  margin: 20px 0;
+}
+.post .post-footer .comments-list .comment .avatar {
+  width: 35px;
+  height: 35px;
+}
+.post .post-footer .comments-list .comment .comment-heading {
+  display: block;
+  width: 100%;
+}
+.post .post-footer .comments-list .comment .comment-heading .user {
+  font-size: 14px;
+  font-weight: bold;
+  display: inline;
+  margin-top: 0;
+  margin-right: 10px;
+}
+.post .post-footer .comments-list .comment .comment-heading .time {
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 0;
+  display: inline;
+}
+.post .post-footer .comments-list .comment .comment-body {
+  margin-left: 50px;
+}
+.post .post-footer .comments-list .comment > .comments-list {
+  margin-left: 50px;
+}
+
+
+
+
+
+</style>
+
+
+
+
+
+<body>
+<!------------container------->
+
+<div class="container">
+
+<h1>COMMENT BOX</h1>
+<!-------Wrap------------>
+<div id="wrap">
+<div id="main">
+<div class="row">
+<div class="col-md-5">
+<h3 class="heading">Comments and Responses</h3>
+</div>
+<div class="col-md-7">
+<div id="upper_blank"></div>
+</div>
+</div>
+</div>
+
+<p>Your email address will not be published. Required fields are marked *</p>
+
+<!------------Form Start---------->
+
+<div id='form'>
+<div class="row">
+<div class="col-md-12">
+
+<form action="" method="POST" id="commentform">
+
+<div id="comment-name" class="form-row">
+<input type = "text" placeholder = "Name (required)" name = "dname"  id = "name" >
+</div>
+<div id="comment-email" class="form-row">
+<input type = "text" placeholder = "Mail (will not be published) (required)" name = "demail"  id = "email">
+</div>
+<div id="comment-url" class="form-row">
+<input type = "text" placeholder = "Website" name = "url"  id = "url" >
+</div>
+<div id="comment-message" class="form-row">
+<textarea name = "comment" placeholder = "Message" id = "comment" ></textarea>
+</div>
+<a href="#"><input type="submit" name="dsubmit" id="commentSubmit" value="Submit Comment"></a>
+<input style="width: 30px" type="checkbox" value="1" name="subscribe" id="subscribe" checked="checked">
+<p1><b>Notify me when new comments are added.</b></p1>
+</form>
+
+</div>
+</div>
+</div>
+</div>
+
+
+</div>
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+<div class="container bootstrap snippet">
+    <div class="col-sm-8">
+        <div class="panel panel-white post panel-shadow">
+            <div class="post-heading">
+                <div class="pull-left image">
+                    <img src="http://bootdey.com/img/Content/user_1.jpg" class="img-circle avatar" alt="user profile image">
+                </div>
+                <div class="pull-left meta">
+                    <div class="title h5">
+                        <a href="#"><b>Ryan Haywood</b></a>
+                        made a post.
+                    </div>
+                    <h6 class="text-muted time">1 minute ago</h6>
+                </div>
+            </div> 
+            <div class="post-description"> 
+                <p>Bootdey is a gallery of free snippets resources templates and utilities for bootstrap css hmtl js framework. Codes for developers and web designers</p>
+                <div class="stats">
+                    <a href="#" class="btn btn-default stat-item">
+                        <i class="fa fa-thumbs-up icon"></i>2
+                    </a>
+                    <a href="#" class="btn btn-default stat-item">
+                        <i class="fa fa-share icon"></i>12
+                    </a>
+                </div>
+            </div>
+            <div class="post-footer">
+                <div class="input-group"> 
+                    <input class="form-control" placeholder="Add a comment" type="text">
+                    <span class="input-group-addon">
+                        <a href="#"><i class="fa fa-edit"></i></a>  
+                    </span>
+                </div>
+                <ul class="comments-list">
+                    <li class="comment">
+                        <a class="pull-left" href="#">
+                            <img class="avatar" src="http://bootdey.com/img/Content/user_1.jpg" alt="avatar">
+                        </a>
+                        <div class="comment-body">
+                            <div class="comment-heading">
+                                <h4 class="user">Gavino Free</h4>
+                                <h5 class="time">5 minutes ago</h5>
+                            </div>
+                            <p>Sure, oooooooooooooooohhhhhhhhhhhhhhhh</p>
+                        </div>
+                        <ul class="comments-list">
+                            <li class="comment">
+                                <a class="pull-left" href="#">
+                                    <img class="avatar" src="http://bootdey.com/img/Content/user_3.jpg" alt="avatar">
+                                </a>
+                                <div class="comment-body">
+                                    <div class="comment-heading">
+                                        <h4 class="user">Ryan Haywood</h4>
+                                        <h5 class="time">3 minutes ago</h5>
+                                    </div>
+                                    <p>Relax my friend</p>
+                                </div>
+                            </li> 
+                            <li class="comment">
+                                <a class="pull-left" href="#">
+                                    <img class="avatar" src="http://bootdey.com/img/Content/user_2.jpg" alt="avatar">
+                                </a>
+                                <div class="comment-body">
+                                    <div class="comment-heading">
+                                        <h4 class="user">Gavino Free</h4>
+                                        <h5 class="time">3 minutes ago</h5>
+                                    </div>
+                                    <p>Ok, cool.</p>
+                                </div>
+                            </li> 
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+	
+
+
+
+
+
+
+
+
+
+</body>
+</html>
